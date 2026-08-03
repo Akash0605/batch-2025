@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON (JavaScript Object Notation)</title>
+</head>
+<body>
+    <h2>JSON (JavaScript Object Notation)</h2>
+    
+    <table border="1">
+        <caption>Users Information</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Website</th>
+                <th>Village</th>
+                <th>City</th>
+                <th>Pin Code</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+    <script>
+
+        let tableBody = document.getElementById("tableBody");
+
+        async function fetchData(){
+            try{
+                const res = await fetch('https://jsonplaceholder.typicode.com/users');
+                console.log(res)
+                const users = await res.json();
+                console.log(users)
+
+                if(res.ok){
+                    console.log("Fetched users!")
+                }
+                else{
+                    throw new Error("Server not reachable!");
+                }
+                
+                users.forEach(user => {
+                    const row = `
+                        <tr>
+                            <td>${user.id}</td>
+                            <td>${user.name}</td>
+                            <td>${user.username}</td>
+                            <td>${user.email}</td>
+                            <td>${user.website}</td>
+                            <td>${user.address.street}</td>
+                            <td>${user.address.city}</td>
+                            <td>${user.address.zipcode}</td>
+                        </tr>
+                    `
+
+                    tableBody.innerHTML += row;
+                });
+            }
+            catch(e){
+                console.log(e)
+                const row = `<center style="text-align: center;"><tr>Failed to fetch users!</tr></center>`
+                tableBody.innerHTML = row
+            }
+
+
+
+        }
+
+        fetchData()
+
+
+
+
+
+
+        // [
+        //     {
+        //         "name": "vikas",
+        //         "age": 10,
+        //         "mobile": 8127812870,
+        //         "address": "Varanasi",
+        //     },
+        //     {
+        //         "name": "vikas",
+        //         "age": 10,
+        //         "mobile": 8127812870,
+        //         "address": {
+        //             "vill": "xyz",
+        //             "post": "sysjl",
+        //             "state": "up",
+        //             "pincode": 222222,
+        //         }
+        //     },
+        // ]
+
+        
+        // JSON parse
+        let info = `{ "name": "Vikas", "age": 20}`;
+        console.log("Info: ",info)
+        let converted = JSON.parse(info);
+        console.log("Converted: ",converted)
+
+
+        // JSON stringify
+        let infos = {name: "Vikas", age: 25};
+        console.log("Info:",infos);
+        let converteds = JSON.stringify(infos)
+        console.log("Converteds:", converteds)
+
+
+        // https://dummyjson.com/products
+        Fetch data and display in cards formats using fields(title, category, rating, price, qrcode, images)
+
+    </script>
+</body>
+</html>

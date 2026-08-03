@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: #EA580C;
+        }
+
+        .container {
+            margin: 210px 150px;
+            display: flex;
+            gap: 80px;
+        }
+
+        .left {
+            padding: 20px 80px;
+
+        }
+        .left .title h1 {
+            font-size: 50px;
+            color: white;
+        }
+        .left p {
+            font-size: 30px;
+            color: white;
+        }
+        .left p:last-child {
+            font-size: 20px;
+            margin-top: -20px;
+        }
+        .left .info {
+            /* padding-right: 20px; */
+        }
+
+        .right {
+            padding: 0 40px;
+        }
+        .form {
+            background-color: white;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 10px;
+        }
+        .form .box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .form .box.button {
+            flex-direction: row;
+            justify-content: center;
+        }
+        .form button {
+            border-radius: 10px;
+            width: 150px;
+            padding: 4px 40px;
+            border: none;
+            font-size: 20px;
+            background-color: #EA580C;
+            color: white;
+        }
+        .form button:last-child {
+            background-color: aliceblue;
+            color: black;
+            border: 1px solid #cecdcd;
+        }
+
+        .form .box label {
+            font-size: 18px;
+            font-weight: 500;
+            color: #b0afaf;
+        }
+        .form .box input {
+            padding: 6px 20px;
+            border-radius: 10px;
+            border: 1px solid #cecdcd;
+            
+        }
+        .form .box input::placeholder {
+            color: #b0afaf;
+
+        }
+        .box a {
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .box.submit button{
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 20px;
+            padding: 6px 40px;
+            border: none;
+            font-size: 20px;
+            background-color: #EA580C;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="title">
+                <h1>Inventory / Stock <br /> Management System</h1>
+            </div>
+            <div class="info">
+                <p>Never Run Out Never Overstock</p>
+                <p>Welcome back. Sign in to monitor your inventory in real time, control stock movements, and keep your business running smoothly.</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="form">
+                <div class="box button">
+                    <button type="button">Log in</button>
+                    <button type="button">Sign up</button>
+                </div>
+                <div class="box">
+                    <label for="mobile">Mobile No</label>
+                    <input type="tel" name="" placeholder="Enter mobile no" id="mobile" />
+                </div>
+                <div class="box">
+                    <label for="password">Password</label>
+                    <input type="password" name="" placeholder="Enter password" id="password" />
+                </div>
+                <div class="box" style="display: flex; margin-top: -10px; flex-direction: row; justify-content: space-between; align-items: center;">
+                    <div>
+                        <input type="checkbox" id="check" name="" />
+                        <label for="check">Remember me</label>
+                    </div>
+                    <a href="#" title="Click Here" target="_parent">Forget Password?</a>
+                </div>
+                <div class="box submit">
+                    <button type="submit" >Log in</button>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center; margin-top: -10px; margin-bottom: 20px;">
+                    <span style="color: #b0afaf;">No account yet? <a style="text-decoration: none;" href="#" target="_blank">Create account</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <p>Function in JavaScript</p>
+    <button onclick="greet()">Greet</button>
+    <button onclick="greet('Alice')">Greet Alice</button>
+    <button onclick="add(10,20)">Add</button>
+    <button onclick="add(100,998)">Add</button>
+    <button onclick="add(500,87765)">Add</button>
+    <button onclick="add(5,8)">Add</button>
+    <button onclick="add(5,8)">Add</button>
+    <button onclick="sub(5,8)">Sub</button>
+    <button onclick="mul(5,8)">Mul</button>
+    <button onclick="div(5,8)">Div</button>
+
+    <button onclick="restParams(1,2,3,4,5)">Rest Parameters</button>
+    <script>
+
+        // Non-parameterized function
+    
+        function greet(){
+            console.log("Hello World");
+        }
+
+        // Parameterized function
+        function greet(name){
+            console.log("Hello ",name);
+            console.log(typeof name);
+
+            let a = 10;
+            let b = 20;
+            let sum = add(a,b);
+
+            console.log("Sum of return value ",a," and ",b," is ",sum);
+        }
+
+        function add(a,b){
+            let c = a + b;
+            console.log("Sum of ",a," + ",b," = ",c);
+            return c;
+        }
+
+        function sub(a,b){
+            let c = a - b;
+            console.log("Subtraction of ",a," and ",b," is ",c);
+        }
+
+        function mul(a,b){
+            let c = a * b;
+            console.log("Multiplication of ",a," and ",b," is ",c);
+        }
+
+        function div(a,b){
+            let c = a / b;
+            console.log("Division of ",a," and ",b," is ",c);
+        }
+
+        // Anonymous function
+        let anonymousFunc = function(){
+            console.log("This is an anonymous function");
+        }
+        console.log(anonymousFunc);
+        anonymousFunc();
+
+        // Return type function
+        console.log("===== ReturnType function =====");
+        function returnType(){
+            return "This is a return type function";
+        }
+        console.log(returnType());
+
+        // Higher order function
+        function aaa(){
+            return "This is number: " + 100;
+        }
+
+        console.log("===== Higher order function =====");
+        function higherOrder(func){
+            console.log("This is a higher order function");
+            let a = func();
+            console.log(a);
+        }
+        higherOrder(aaa);
+
+        // Nested function
+        console.log("===== Nested function =====");
+        function outer(){
+            console.log("This is an outer function");
+            function inner(){
+                console.log("This is an inner function");
+            }
+            inner();
+            // outer();
+        }
+        outer();
+
+        // Function expression
+        console.log("===== Function expression =====");
+        let funcExp = function(){
+            console.log("This is a function expression");
+        }
+        funcExp();
+
+        // Arrow function
+        console.log("===== Arrow function =====");
+        let arrowFunc = () => {
+            console.log("This is an arrow function");
+        }
+        arrowFunc();
+
+        // Callback function
+        console.log("===== Callback function =====");
+        function callbackFunc(callback){
+            console.log("This is a callback function");
+            callback();
+        }
+        callbackFunc(() => {
+            console.log("This is a callback function passed as an argument");
+        });
+        
+
+        // IIFE (Immediately Invoked Function Expression)
+        console.log("===== IIFE (Immediately Invoked Function Expression) =====");
+        (function(){
+            console.log("This is an IIFE (Immediately Invoked Function Expression)");
+        })();
+        
+
+        // Rest parameters
+        console.log("===== Rest parameters =====");
+        function restParams(...args){
+            console.log("This is a function with rest parameters");
+            console.log(args);
+            document.write("Rest parameters: " + args);
+            for(let i = 0; i < args.length; i++){
+                document.write(args[i] + "<br>");
+            }
+            console.log(args[0])
+        }
+        restParams(1,2,3,4,5);
+
+        // Default parameters
+        console.log("===== Default parameters =====");
+        function defaultParams(a = 10, b = 20){
+            let c = a + b;
+            console.log("Sum of ",a," and ",b," is ",c);
+        }
+        defaultParams();
+        defaultParams(5,8);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <script>
+        // Array is a data structure that can hold multiple values in a single variable.
+        // It is a collection of elements, each identified by an index.
+
+        // Creating an array
+        let fruits = ["Apple", "Banana", "Cherry"];
+        console.log(fruits);
+
+        // Accessing array elements
+        console.log(fruits[0]); // Apple
+        console.log(fruits[1]); // Banana
+        console.log(fruits[2]); // Cherry
+
+        // Modifying array elements
+        fruits[1] = "Blueberry";
+        console.log(fruits); // ["Apple", "Blueberry", "Cherry"]
+
+        // Array length
+        console.log(fruits.length); // 3
+
+        for(let i = 0; i < fruits.length; i++){
+            console.log(fruits[i]);
+        }
+
+        // Array methods
+        fruits.push("Date"); // Adds an element to the end of the array
+        console.log(fruits); // ["Apple", "Blueberry", "Cherry", "Date"]
+
+        fruits.pop(); // Removes the last element of the array
+        console.log(fruits); // ["Apple", "Blueberry", "Cherry"]
+
+        fruits.unshift("Elderberry"); // Adds an element to the beginning of the array
+        console.log(fruits); // ["Elderberry", "Apple", "Blueberry", "Cherry"]
+
+        fruits.shift(); // Removes the first element of the array
+        console.log(fruits); // ["Apple", "Blueberry", "Cherry"]
+
+        fruits.splice(1, 2); // Removes 1 element at index 1
+        console.log(fruits); // ["Apple", "Cherry"]
+
+        fruits.splice(1, 0, "Fig"); // Adds "Fig" at index 1
+        console.log(fruits); // ["Apple", "Fig", "Cherry"]
+    </script>
+    <!-- push(), pop(), shift(), unshift() -->
+</body>
+</html>

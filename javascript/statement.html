@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional statements</title>
+</head>
+<body>
+    <h1>Conditional statements</h1>
+    <script>
+        
+        var a = 2;
+        var b = 3;
+        if (b > a) {
+            document.write("b is greater than a");
+        }
+
+        if( 4 < 5) {
+            document.write("<br />4 is lessar than 5");
+        } 
+
+        if(4){
+            document.write("<br />4 is truthy value");
+        }
+
+        if(0){
+            document.write("<br />0 is falsy value");
+        }
+
+        if(0.4){
+            document.write("<br />0.4 is truthy value");
+            document.write("<br />0.4 is truthy value");
+            document.write("<br />0.4 is truthy value");
+        }
+
+        if(-5){
+            document.write("<br />-5 is truthy value");
+        }
+
+        if(100) document.write("<br />100 is truthy value");
+
+        if(true) document.write("<br />true is truthy value");
+        if(false) document.write("<br />false is falsy value");
+
+        if("v" == 6) document.write("<br />vikas == vikas is truthy value");
+
+        var age = 20;
+        if(age >= 18) {
+            document.write("<br />You are eligible to vote<br />");
+        }
+
+        // if-else statement
+
+        var age = 18;
+        if(age >= 18) {
+            document.write("<br />You are eligible to vote");
+        } else {
+            document.write("<br />You are not eligible to vote");
+        }
+
+        // if-else-if statement
+        var x = 10;
+        var y = 20;
+        var z = 30;
+        if(x > y && x > z) {
+            document.write("<br />x is greatest number");
+        } else if(y > x && y > z) {
+            document.write("<br />y is greatest number");
+        } else {
+            document.write("<br />z is greatest number");
+        }
+
+        // Nested if statement
+        
+        document.write("<br />==== Nested if statement ====<br />");
+        var num = 5;
+        if(num > 0) {
+
+            if(true) {
+                document.write("<br />This is nested if statement");
+            }
+
+            document.write("<br />num is positive number");
+
+            if(num % 2 == 0) {
+                document.write("<br />num is positive even number");
+            } else {
+                document.write("<br />num is positive odd number");
+            }
+
+            if(num > 0 && num < 10) {
+                document.write("<br />num is a single digit positive number");
+            } else if(num >= 10 && num < 100) {
+                document.write("<br />num is a multi digit positive number");
+            }
+
+        } else {
+            document.write("<br />num is not a positive number");
+        }
+
+        // Switch case statement
+        document.write("<br />==== Switch case statement ====<br />");
+        var day = 3;
+        switch(day) {
+            case 1:
+                document.write("<br />Monday");
+                break;
+            case 2:
+                document.write("<br />Tuesday");
+                break;
+            case 3:
+                document.write("<br />Wednesday");
+                break;
+            case 4:
+                document.write("<br />Thursday");
+                break;
+            case 5:
+                document.write("<br />Friday");
+                break;
+            case 6:
+                document.write("<br />Saturday");
+                break;
+            case 7:
+                document.write("<br />Sunday");
+                break;
+            default:
+                document.write("<br />Invalid day");
+        }
+
+        switch(day) {
+            case 3:
+                document.write("<br />Wednesday");
+            case 1:
+                document.write("<br />Tuesday");
+                break;
+            default:
+                document.write("<br />Invalid day");
+        }
+
+        switch(day) {
+            case 30:
+                document.write("<br />Wednesday");
+            case 1:
+                document.write("<br />Tuesday");
+                break;
+            default:
+                document.write("<br />Invalid day");
+        }
+
+        // Ternary operator (?:)
+        document.write("<br />==== Ternary operator (?:) ====");
+        var age = 20;
+        var result = (age >= 18) ? "You are eligible to vote" : "You are not eligible to vote";
+        document.write("<br />" + result);
+
+        var login = true;
+        if(login) {
+            document.write("<br />Welcome to the website");
+        } else {
+            document.write("<br />Please login to continue");
+        }
+
+
+    </script>
+</body>
+</html>

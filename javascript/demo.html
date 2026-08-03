@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript demo</title>
+</head>
+<body>
+
+    <h2 id="id">this is demo with internal js</h2>
+    <script>
+        console.log("HELLO WORLD");
+
+        let xyz = document.getElementById("id");
+        console.log(xyz)
+
+        let z = "This is next message";
+        console.log(z)
+
+        let x = 40;
+        console.log("X = ",x);
+
+        let y = 23.23
+        console.log(y," = Y")
+
+        console.log("X + Y = ",x + y);
+
+        x = 60;
+        console.log(x)
+
+        const vikas = 50;
+        let Vikas = 100
+        console.log(vikas)
+        console.log(Vikas)
+
+        var akas = 100;
+        console.log(akas)
+
+        let a = 100000
+        let b = 4000
+        let c = 30001
+
+        console.log(a+b+c)
+        console.log(a+b-c)
+        console.log(a-b-c)
+        console.log(a*b-c)
+        console.log(a-b*c)
+        console.log(c/a)
+        console.log(c%a)
+
+        if(c % 2 == 0){
+            console.log("This is Even number")
+        }
+        else{
+            console.log("This is Odd number")
+        }
+
+        if(a > b && a > c){
+            console.log(a, " is greater")
+        }
+        else if(b > a && b > c){
+
+            console.log(b," is greater")
+        }
+        else{
+            console.log(c," is greater")
+        }
+
+    </script>
+
+    <script src="./demo.js"></script>
+</body>
+</html>

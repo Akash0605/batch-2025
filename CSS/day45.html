@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo Class</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        input[type="number"]:read-only {
+            background-color: #df1b1b;
+            border: 1px solid #3003e6;
+            color: #999;
+        }
+        input[type="text"]:read-write {
+            background-color: #1bdf56;
+            border: 1px solid #3003e6;
+            color: #999;
+        }
+        /* input[type="number"]:in-range{
+            background-color: #df1b1b;
+            border: 1px solid #3003e6;
+            color: #999;
+        } */
+        /* input[type="number"]:in-range{
+            background-color: #df1b1b;
+            border: 1px solid #3003e6;
+            color: #999;
+        } */
+        input[type="number"]:out-of-range{
+            background-color: #ec5656;
+            border: 1px solid #3003e6;
+            color: #999;
+        }
+
+        button:active {
+            background-color: #1bdf56;
+            border: 1px solid #3003e6;
+            color: #999;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="center">
+        <form>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <input type="number" min="18" max="60" placeholder="Age" >
+            <input type="tel" minlength="10" maxlength="12" placeholder="Phone Number">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

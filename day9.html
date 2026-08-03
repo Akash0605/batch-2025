@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Select Option</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Select Option</legend>
+        <form action="" method="get">
+
+            Gender: <select name="gender">
+                <option value="" name="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            Address:
+            <select name="state">
+                <optgroup label="State">
+                    <option>Uttar Pradesh</option>
+                    <option>Rajsthan</option>
+                    <option>Maharastra</option>
+                </optgroup>
+                
+                <optgroup label="City">
+                    <option>Uttar Pradesh</option>
+                    <option>Rajsthan</option>
+                    <option>Maharastra</option>
+                </optgroup>
+                
+            </select>
+
+            State:
+            <input list="datalist" />
+            <datalist id="datalist">
+                <option>UP</option>
+                <option>MP</option>
+                <option>BH</option>
+                <option>JK</option>
+                <option>UP</option>
+                <option>MP</option>
+                <option>BH</option>
+                <option>JK</option>
+                <option>UP</option>
+                <option>MP</option>
+                <option>BH</option>
+                <option>JK</option>
+                <option>UP</option>
+                <option>MP</option>
+                <option>BH</option>
+                <option>JK</option>
+                <option>UP</option>
+                <option>MP</option>
+                <option>BH</option>
+                <option>JK</option>
+            </datalist>
+
+            Color: <select name="color" multiple>
+                <option value="">Select</option>
+                <option value="red" >Red</option>
+                <option value="pink">Pink</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="blue">Blue</option>
+                <option value="black">black</option>
+            </select>
+
+
+            <br />
+            <br />
+            <br />
+            Value: 
+            <input type="radio" value="1" name="value" />1
+            <input type="radio" value="2" name="value" />2
+            <input type="radio" value="3" name="value" />3
+            <br />
+            Color: 
+            <input type="radio" value="1" name="color" />Red
+            <input type="radio" value="2" name="color" />Green
+            <input type="radio" value="3" name="color" />Blue
+
+
+            <br />
+            Name: <input type="text" value="" placeholder="Enter name here" name="name" /><br />
+            <br />
+            Select Value: <input type="range" value="3" name="range" />
+            <button><img src="pp.png"></button>
+            <button><a href="https://task.mediatechtemple.com/task-management/tasks">Click Here</a></button>
+            <a href="https://task.mediatechtemple.com/task-management/tasks">Click Here</a>
+            <input type="reset" value="RESET" />
+            <input type="submit" value="SUBMIT" />
+        </form>
+    </fieldset>
+</body>
+
+</html>

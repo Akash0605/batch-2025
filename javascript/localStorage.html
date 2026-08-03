@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    <button onclick="setLocalStorage()">Set</button>
+    <button onclick="getLocalStorage()">Get</button>
+
+    <p id="output"></p>
+
+    <script>
+        function setLocalStorage(){
+            localStorage.setItem("username", "Vikas");
+            document.getElementById("output").innerHTML = "Local storate set."
+        }
+        function getLocalStorage(){
+            let gets = localStorage.getItem("username");
+            document.getElementById("output").innerHTML = "Stored username is: " + gets;
+        }
+    </script>
+</body>
+</html>

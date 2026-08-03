@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Style</title>
+        <style>
+            .first li:first-child, .first li:last-child{
+                list-style-type: decimal-leading-zero;
+            }
+
+            .first li{
+                list-style-type: circle;
+            }
+
+            .second li:nth-child(odd){
+                list-style-type: lower-roman;
+                background-color: aqua;
+            }
+            .third {
+                width: 80px;
+            }
+            .third li {
+                list-style-position: outside;
+            }
+
+            .forth {
+                list-style: inside disc;
+                width: 80px;
+            }
+            
+            .fifth li {
+                list-style: none; /* remove default bullet */
+                background: url('./icons.jpg') no-repeat left center;
+                background-size: 16px 16px; /* scale the icon */
+                padding-left: 24px; /* space for the icon */
+                
+            }
+            .fifth li::marker{
+                color: red;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <ol class="first">
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+        </ol>
+        <ul class="second">
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+        </ul>
+        <ol class="third">
+            <li>Mango sfdsjf sjlsfj djsljsa lajl afla fasljdla aslj jflsf sfj</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+        </ol>
+        <ul class="forth">
+            <li>Mango ssfjslfj slfjslfj lasjflsjf l</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mangolsfjs slfjsf sfjls </li>
+            <li>Mango</li>
+        </ul>
+        <ol class="fifth">
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+            <li>Mango</li>
+        </ol>
+    </body>
+</html>

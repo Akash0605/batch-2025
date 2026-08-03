@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // The concat() method is used to merge two or more arrays. It does not change the existing arrays, but instead returns a new array.
+
+        let a = "vikas";
+        let b = "kumar";
+
+        console.log(a + " " + b); // "vikas kumar"
+
+        let y = 67;
+
+        console.log(a + y); // "vikas67"
+        console.log(y + a); // "67vikas"
+        console.log(a + b + y); // "vikaskumar67"
+        console.log(y + a + b); // "67vikaskumar"
+        console.log(a + y + b); // "vikas67kumar"
+
+        let c = a.concat(b);
+        let d = b.concat(a, " ", y);
+        console.log(d); // "kumarvikas 67"
+
+        console.log(c); // "vikaskumar"
+
+        
+        let array1 = [1, 2, 3];
+        let array2 = [4, 5, 6];
+        let array3 = [7, 8, 9];
+
+        let mergedArray = array1.concat(array2, array3);
+        console.log(mergedArray); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // You can also concatenate arrays with non-array values
+        let mixedArray = array1.concat("Hello", true);
+        console.log(mixedArray); // [1, 2, 3, "Hello", true]
+
+        // map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+        let numbers = [1, 2, 3, 4, 5];
+        let squaredNumbers = numbers.map(function(num, index){
+            document.write(num * num + "<br>");
+            document.write(num + "<br>");
+            // return num * num;
+        });
+        console.log(squaredNumbers); // [1, 4, 9, 16, 25]
+
+        // filter() method creates a new array with all elements that pass the test implemented by the provided function.
+        let evenNumbers = numbers.filter(num => num % 2 === 0);
+        console.log(evenNumbers); // [2, 4]
+
+        // Find method
+        let arrvd = [1, 2, 3, 4, 5];
+        let found = arrvd.find(num => num > 3);
+        console.log(found); // 4
+
+        // FindIndex method
+        let foundIndex = arrvd.findIndex(num => num > 3);
+        console.log(foundIndex); // 3
+
+        // reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr); // [1, 2, 3, 4, 5]
+        arr.reverse();
+        console.log(arr); // [5, 4, 3, 2, 1]
+
+        // join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.
+        let arr1 = ["Hello", "World", "JavaScript"];
+        console.log(arr1); // ["Hello", "World", "JavaScript"]
+        console.log(arr1.join()); // "Hello,World,JavaScript"
+        let joinedString = arr1.join(" - ");
+        console.log(joinedString); // "Hello World JavaScript"
+
+        // split() method divides a String into an ordered list of substrings, puts these substrings into an array, and returns the array.
+        let str = "Hello World JavaScript";
+        console.log(str); // "Hello World JavaScript"
+        let strArray = str.split(" ");
+        console.log(strArray); // ["Hello", "World", "JavaScript"]
+        let charArray = str.split("");
+        console.log(charArray); // ["H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d", " ", "J", "a", "v", "a", "S", "c", "r", "i", "p", "t"]
+
+        // write program to print characters from number 1 to 150 
+
+        for(let i = 1; i <= 150; i++){
+            console.log(i + " -> " + String.fromCharCode(i));
+        }
+
+        // indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
+        let arr2 = [1, 2, 3, 4, 5];
+        console.log(arr2.indexOf(3)); // 2
+        console.log(arr2.indexOf(6)); // -1
+
+        // includes() method determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+        console.log(arr2.includes(3)); // true
+        console.log(arr2.includes(6)); // false
+
+        
+    </script>
+</body>
+</html>

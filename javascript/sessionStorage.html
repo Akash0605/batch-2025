@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+    <h1>Session Storage</h1>
+
+    <button onclick="setSessionStorage()">Set Session</button>
+    <button onclick="getSessionStorage()">Get Session</button>
+
+    <p id="output"></p>
+
+    <script>
+        function setSessionStorage(){
+            sessionStorage.setItem("username", "Vikas");
+            document.getElementById("output").innerHTML = "Session storate set."
+        }
+        function getSessionStorage(){
+            let gets = sessionStorage.getItem("username");
+            document.getElementById("output").innerHTML = "Stored username is: " + gets;
+        }
+    </script>
+</body>
+</html>

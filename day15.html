@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 15 HTML Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <meta http-equiv="refresh" content="0" /> -->
+    </head>
+    <body>
+        <canvas height="400px" width="700px" id="myCanvas" style="border:1px solid #000000;">
+        </canvas>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            // Draw a rectangle
+            ctx.fillStyle = "green";
+            ctx.fillRect(20, 20, 150, 100);
+            // Draw a circle
+            ctx.beginPath();
+            ctx.fillStyle = "#00FF00";
+            ctx.arc(300, 70, 50, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            // Draw a line
+            ctx.beginPath();
+            ctx.moveTo(400, 20);
+            ctx.lineTo(550, 120);
+            ctx.strokeStyle = "#0000FF";
+            ctx.lineWidth = 5;
+            ctx.stroke();
+            // Draw text
+            ctx.font = "30px Arial";
+            ctx.fillStyle = "#000000";
+            ctx.fillText("Hello Canvas", 250, 200);
+        </script>
+
+        <button onmouseover="document.getElementById('myDialog').show();">Open Dialog</button>
+
+        <dialog id="myDialog" width="400px" height="200px"> 
+            <form method="dialog">
+                <p><label>Enter your name: <input type="text" onkeyup="clone();" name="name" pattern="[A-Za-z]+" title="Text" required></label>
+                    <label>Enter your age: <input type="text" name="num" pattern="[0-9]+" title="Only numbers allowed"></label></p>
+                    <output name="result" for="name age"></output>
+                <span ondblclick="alert('What do you want.')">Do you confirm?</span>
+                <menu>
+                    <button value="cancel">Cancel</button>
+                    <button id="confirmBtn" value="default">Confirm</button>
+                </menu>
+            </form> 
+            &copy; 2024 Dialog Example
+
+            <button onmouseover="document.getElementById('myDialog').close();">Close</button>
+        </dialog>
+        <script>
+            function clone() {
+                var nameInput = document.querySelector('input[name="name"]');
+                console.log("Current input value: " + nameInput.value);
+                document.querySelector('output[name="result"]').value = nameInput.value;
+                document.querySelector('input[name="num"]').value = nameInput.value;
+            }
+        </script>
+    </body>

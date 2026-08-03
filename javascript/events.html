@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Events</h1>
+
+    <input type="text" onclick="alert('Key pressed')" />
+
+    <input type="text" value="" id="key" onkeyup="paste()" />
+    <input type="text" id="pasteField" />
+    <br />
+    <span id="output"></span>
+
+
+    <script>
+        function paste() {
+            let key = document.getElementById("key");
+            let pasteField = document.getElementById("pasteField");
+            let output = document.getElementById("output");
+            pasteField.value = key.value;
+            output.innerHTML = key.value;
+        }
+
+    </script>
+
+    <br />
+    <div id="parent" class="parent">
+        <div id="child" class="child">
+            <p id="para">This is paragraph.</p>
+        </div>
+    </div>
+
+    <style>
+        .parent {
+            height: 400px;
+            width: 400px;
+            background-color: red;
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child {
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child p {
+            background-color: green;
+            color: white;
+            border-radius: 1rem;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        var parent = document.getElementById("parent");
+        parent.addEventListener("click", function () {
+            let parent = document.querySelector("#parent");
+            parent.setAttribute("style", "background-color: orange;");
+        })
+
+        var child = document.getElementById("child");
+        child.addEventListener("mouseover", function () {
+            let child = document.querySelector("#child");
+            child.setAttribute("style", "background-color: purple;");
+        })
+        child.addEventListener("mouseleave", function () {
+            let child = document.querySelector("#child");
+            child.setAttribute("style", "background-color: blue;");
+        })
+
+        var para = document.querySelector("#para");
+        para.addEventListener("dblclick", function () {
+            let para = document.querySelector("#para");
+            para.setAttribute("style", "background-color: black;");
+        })
+        para.addEventListener("keypress", function () {
+            let para = document.querySelector("#para");
+            para.setAttribute("style", "background-color: black;");
+        })
+    </script>
+    
+// JavaScript has many events, but I’ll give you all the important and commonly used ones with simple examples so you can
+// understand clearly 💯
+
+// ✅ 1. Mouse Events
+
+// EventDescriptionclickWhen element is clickeddblclickDouble clickmouseoverCursor entersmouseoutCursor
+// leavesmousedownMouse button pressedmouseupMouse button released
+// ✅ Example
+        HTML < button id = "btn" > Click me</button >
+            <script>document.getElementById("btn").addEventListener("click", function () {alert("Button clicked"); });</script>
+
+    // ✅ 2. Keyboard Events
+
+    // EventDescriptionkeydownKey pressedkeyupKey releasedkeypressKey pressed (deprecated)
+    // ✅ Example
+    HTML<input type="text" id="input">
+    <script>document.getElementById("input").addEventListener("keyup", function (e) {console.log("You pressed:", e.key); });</script>
+
+    // ✅ 3. Form Events
+
+    // EventDescriptionsubmitForm submittedchangeWhen value changesfocusInput selectedblurInput loses focusinputValue
+    // changes
+    // (live typing)
+    // ✅ Example
+    HTML<input type="text" id="name">
+    <script>document.getElementById("name").addEventListener("focus", function () {console.log("Input focused"); });</script>
+
+    // ✅ 4. Window Events
+
+    // EventDescriptionloadPage loadedresizeWindow resizedscrollPage scrolledunloadLeaving page
+    // ✅ Example
+    JavaScriptwindow.addEventListener("load", function() { console.log("Page loaded");});Show more lines
+
+    // ✅ 5. Clipboard Events
+
+    // EventDescriptioncopyCopy textcutCut textpastePaste text
+    // ✅ Example
+    HTML<input type="text" id="box">
+    <script>document.getElementById("box").addEventListener("paste", function () {alert("Text pasted!"); });</script>
+
+    // ✅ 6. Drag & Drop Events
+
+    // EventDescriptiondragDraggingdragstartStart draggingdragendEnd draggingdragoverElement over drop zonedropDrop element
+    // ✅ Example
+    HTML<div id="box" draggable="true">Drag me</div>
+    <script>document.getElementById("box").addEventListener("dragstart", function () {console.log("Dragging started"); });</script>
+
+    // ✅ 7. Touch Events (Mobile)
+
+    // EventDescriptiontouchstartTouch beginstouchmoveFinger movestouchendTouch ends
+    // ✅ Example
+    JavaScriptdocument.addEventListener("touchstart", function() { console.log("Screen touched");});
+
+    // ✅ 8. Pointer Events (Advanced)
+
+    // EventDescriptionpointerdownPointer pressedpointerupReleasedpointermoveMoving pointer
+
+    // ✅ 9. Media Events (Audio/Video)
+
+    // EventDescriptionplayMedia startspauseMedia pausedendedMedia finished
+    // ✅ Example
+    HTML<video id="video" controls></video>
+    <script>document.getElementById("video").addEventListener("play", function () {console.log("Video playing"); });</script>
+
+    // ✅ 10. Animation & Transition Events
+
+    EventDescriptionanimationstartAnimation startanimationendAnimation endtransitionendCSS transition ends
+
+    // 🎯 Quick Summary
+
+    // Mouse → click, hover
+    // Keyboard → keyup, keydown
+    // Form → input, change
+    // Window → load, scroll
+    // Clipboard → copy, paste
+    // Drag → drag, drop
+
+</body>
+
+</html>

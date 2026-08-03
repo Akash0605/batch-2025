@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Data Types</h3>
+    <h4>Primitive Data Types</h4>
+
+    <script>
+        // String
+        let name = "John Doe";
+        console.log("String:", name);
+
+        // Number
+        let age = 30;
+        console.log("Number:", age);
+
+        // Boolean
+        let isStudent = true;
+        console.log("Boolean:", isStudent);
+
+        // Null
+        let emptyValue = null;
+        console.log("Null:", emptyValue);
+
+        // Undefined
+        let notDefined;
+        console.log("Undefined:", notDefined);
+
+        // Symbol
+        let uniqueId = Symbol("id");
+        console.log("Symbol:", uniqueId);
+
+        let num = 30.65;
+        console.log("Type of Data: " ,typeof num);
+        console.log("Float Value: " , num)
+        console.log("Integer Value: " , parseInt(num));
+
+        let aa = "30.65"
+        console.log(aa + 10);
+        console.log("String Value: " , aa)
+        console.log("Type of Data: " ,typeof aa)
+        console.log("Type of Data: " , parseInt(aa))
+        console.log("Float Value: " , parseFloat(aa))
+
+        let str = "A";
+        console.log("String Value: " , str)
+        console.log("Type of Data: " ,typeof str)
+        console.log("parsing: " , parseInt(str));
+
+        // BigInt Data Type
+        let bigIntValue = 1234567890123456789012345678901234567890n;
+        let intValue = 1234567890123456789012345678901234567890;
+        console.log("BigInt:", bigIntValue);
+        console.log("Integer:", intValue);
+
+        let big = "1234567890123456789012345678901234567890";
+        console.log("Big Int value: ", BigInt(bigIntValue));
+        console.log("Big String value: ", BigInt(big) + 10n);
+
+        // Type Coercion
+        // Implicit Type Coercion
+        let vikas = 'vikas';
+        let vikas1 = 10;
+        console.log("String value: ", vikas);
+        console.log("Number value: ", vikas1);
+        console.log("String + Number: ", vikas + vikas1);
+
+        // Explicit Type Coercion
+        let a = '10';
+        let b = 20;
+        console.log("String + Number: ", a + b);
+        console.log("Converted + Number: ", Number(a) + b);
+
+        isNaN("Hello"); // true
+        isNaN(123); // false
+
+        aa = isFinite(10); // true
+        console.log("Is 10 finite? ", aa);
+        ab = isFinite(0); // true
+        console.log("Is 0 finite? ", ab);
+        ac = isFinite(-5); // true
+        console.log("Is -5 finite? ", ac);
+        ad = isFinite(3.14); // true
+        console.log("Is 3.14 finite? ", ad);
+        ae = isFinite("vikas"); // false
+        console.log("Is 'vikas' finite? ", ae);
+        af = isFinite(Infinity); // false
+        console.log("Is Infinity finite? ", af);
+    </script>
+</body>
+</html>

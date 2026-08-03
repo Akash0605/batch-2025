@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Positions and Layers</title>
+    <style>
+        .card {
+            width: 400px;
+            position: relative;
+            height: 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-left: 20%;
+            background-color: aqua;
+            z-index: 7;
+            /* ✅ no px */
+        }
+
+        .inside {
+            position: absolute;
+            left: 80px;
+            top: 20px;
+            width: 300px;
+            height: 100px;
+            background-color: blueviolet;
+            border: 1px solid black;
+            z-index: 6;
+            /* ✅ no px */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card c">
+    </div>
+    <div class="inside"><SPAN>INSIDE CONTENT</SPAN></div>
+</body>
+
+</html>

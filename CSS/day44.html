@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .first {
+            display: grid;
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-rows: repeat(200px 1fr);
+            gap: 10px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 2px solid red;
+        }
+
+        .child {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 60px 1fr 50px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer"
+                "about about";
+            height: 100vh;
+        }
+
+        header {
+            grid-area: header;
+            background: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        aside {
+            grid-area: sidebar;
+            background: #444;
+            color: white;
+            padding: 20px;
+        }
+
+        main {
+            grid-area: content;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #222;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .about {
+            grid-area: about;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 200px);
+            grid-template-rows: 2fr;
+            /* gap: 20px; */
+            row-gap: 40px;
+            column-gap: 50px;
+        }
+
+        .container div {
+            /* height: 500px; */
+        }
+        .select {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="first">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div> -->
+
+    <div class="layout">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>
+            <div class="container">
+                <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae doloremque hic nesciunt a tempore id labore laborum iste nemo natus. Ducimus nam et accusamus dolores labore, quis provident ipsa quam?</div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+            <select class="select" style="padding: 20px;">
+                <option>animation-delay</option>
+            </select>
+        </main>
+        <footer>Footer</footer>
+
+    </div>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Fonts</title>
+        <style>
+            div{
+                border: 2px solid black;
+                margin-bottom: 20px;
+            }
+            .first{
+                text-decoration: underline;
+                text-align: right;
+                border: 2px solid red;
+            }
+            .second{
+                text-decoration: overline;
+                text-align: center;
+                border: 2px solid blue;
+            }
+            .third{
+                text-decoration: line-through;
+                text-decoration-color: blue;
+                text-decoration-thickness: 3px;
+                text-align: left;
+                text-align: justify;
+                
+                /* text-wrap: 300px; */
+                border: 2px solid green;
+            }
+            .first-span{
+                letter-spacing: 3px;
+            }
+            h1{
+                word-spacing: 10px;
+                text-shadow: 2px 2px 2px rgb(165, 80, 80);
+                text-transform: capitalize;
+            }
+
+            h2{
+                text-transform: uppercase;
+            }
+            h3{
+                text-transform: lowercase;
+
+            }
+            .forth{
+                line-height: 20px;
+                font-size: 20px;
+                
+                text-indent: 30px;
+            }
+            .p{
+                /* text-align: justify; */
+                text-rendering: optimizeSpeed;
+                direction: rtl;
+                text-underline-offset: initial;
+                rotate: 40deg;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, atque sit. Numquam assumenda dolorum illum fugiat accusamus, quisquam eveniet aliquid error temporibus dolore voluptates, pariatur saepe. Ex ratione magnam quisquam?</p>
+            <p class="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto a natus distinctio, blanditiis eveniet libero nulla explicabo, corrupti minus, voluptatum sapiente assumenda. Libero placeat perspiciatis officia voluptatum cupiditate. Voluptatum, perspiciatis.</p>
+            <p class="third">Lorem i Lorem dfjks jfjjd ipsum dolor sit amet consectetur adipisicing elit. Culpa, atque sit. Numquajdjjd jjsm assumenda dolorum illum fugiat accusamus, quisquam eveniet aliquid error temporibus h dolore voluptates, pariatur saepsum dolor sit amet consectetur adipisicing e ljdslj  jfjlsj lit. Quisquam, quidem.</p>
+            <span class="first-span">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</span>
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p class="forth">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, atque sit. Numquam assumenda dolorum illum fugiat accusamus, quisquam eveniet aliquid error temporibus dolore voluptates, pariatur saepe. Ex ratione magnam it. Numquam assumenda dolorum illum fugiat accusamus, quisquam eveniet aliquid error temporibus dolore voluptates, pariatur saepe. Ex ratione magnam quisquam?</p>
+        </div>
+        <p class="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis suscipit consequuntur fugit earum eos illum sit, voluptas iure officia porro omnis officiis aliquid, nisi ad vero voluptatem ut nihil delectus!</p>
+        <dl>
+            <dt style="font-weight: bold; font-style: italic;">Definition List</dt>
+            <dd style="margin-bottom: 10px;">A definition list is a collection of terms and their definitions.</dd>
+            <dt style="font-weight: bold; font-style: italic;">HTML</dt>
+            <dd style="margin-bottom: 10px;">HTML stands for HyperText Markup Language.</dd>
+            <dt style="font-weight: bold; font-style: italic;">CSS</dt>
+            <dd style="margin-bottom: 10px;">CSS stands for Cascading Style Sheets.</dd>
+            <dt style="font-weight: bold; font-style: italic;">JavaScript</dt>
+            <dd style="margin-bottom: 10px;">JavaScript is a programming language used to make web pages interactive.</dd>
+        </dl>
+    </body>
+</html>

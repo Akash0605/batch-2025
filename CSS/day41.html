@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox</title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid red;
+            flex-wrap: wrap-reverse;
+            /* flex-grow: 40px; */
+            justify-content: space-between;
+        }
+        .container1{
+            display: flex;
+            border: 2px solid red;
+            /* flex-direction: column; */
+            justify-content: space-evenly;
+            height: 200px;
+            margin-top: 40px;
+        }
+        .container3{
+            display: flex;
+            border: 2px solid red;
+            /* flex-direction: column; */
+            justify-content: space-evenly;
+            height: 500px;
+            margin-top: 40px;
+            align-items: baseline;
+            
+        }
+
+
+        .item{
+            width: 500px;
+            border: 2px double blue;
+            height: auto;
+            padding: 10px;
+            min-width: 100px;
+            margin: 10px;
+
+
+        }
+        .container1 .item{
+            width: 200px;
+            border: 2px double blue;
+            height: auto;
+            padding: 10px;
+            min-width: 100px;
+            margin: 10px;
+            flex-shrink: ;
+
+
+        }
+        .container3 .item{
+            width: 200px;
+            border: 2px double blue;
+            height: 300px;
+            padding: 10px;
+            min-width: 100px;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">div 1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente expedita sint ipsum cupiditate doloremque quo. Delectus deserunt, id animi est neque, doloremque voluptatibus dolorem quisquam in eveniet expedita. Soluta, reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos sapiente animi corporis aliquam, assumenda vero necessitatibus cum nisi voluptatibus soluta quaerat hic inventore in quod natus ipsum ut laudantium iure!</div>
+        <div class="item">div 2</div>
+        <div class="item">div 3</div>
+        <div class="item">div 4</div>
+    </div>
+    <div class="container1">
+        <div class="item">div 1</div>
+        <div class="item">div 2</div>
+        <div class="item">div 3</div>
+        <div class="item">div 4</div>
+        <div class="item">div 4</div>
+    </div>
+    <div class="container3">
+        <div class="item">div 1</div>
+        <div class="item">div 2</div>
+        <div class="item">div 3</div>
+        <div class="item">div 4</div>
+    </div>
+</body>
+</html>

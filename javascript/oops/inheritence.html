@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritence</title>
+</head>
+<body>
+    <script>
+        // Parent class
+        class Animal{
+            constructor(name){
+                this.name = name;
+            }
+            talk(){
+                return this.name + " makes a noise.";
+            }
+        }
+
+        // Child class
+        class Dog extends Animal{
+            speak(){
+                return this.name + " barks.";
+            }
+        }
+                
+        const dog = new Dog("Buddy");
+        console.log(dog.speak());
+        console.log(dog.talk());
+        
+        
+        // Parent class
+        class Animals{
+            constructor(name){
+                this.name = name;
+            }
+            talk(){
+                return this.name + " makes a noise.";
+            }
+        }
+
+        // Child class
+        class Dogs extends Animals{
+            constructor(name, breed){
+                super(name);
+                this.breed = breed;
+            }
+            speak(){
+                return this.name + " barks and " + this.breed + ".";
+            }
+        }
+
+        const dogs = new Dogs("Buddy", "Golden Retriever");
+        console.log(dogs.speak());
+        console.log(dogs.talk());
+
+
+        // Create to classs, one parent and second is child class. 
+        // Parent class have two method (normal, static).
+        // Child class have also two method (normal, static).
+        // child class can inherit all methods of parent and 
+        // execute them.
+
+        class Parent {
+            constructor(velue) {
+                this.velue = (velue)
+            }
+            normals() {
+                console.log("this is parent class first method " + this.velue)
+            }
+            statics() {
+                console.log("this is parent class second method")
+            }
+        }
+
+        class Child extends Parent {
+
+            normal() {
+                console.log("this is parent class first method")
+            }
+            static() {
+                console.log("this is parent class second method")
+            }
+
+        }
+
+        let good = new Child("hello")
+        good.normal();
+        good.static();
+        good.normals();
+        good.statics();
+
+        // Methos Overriding
+        class Ishan{
+            honest(){
+                console.log("Ishan is honest father of Akash.")
+            }
+        }
+        class Akash extends Ishan{
+            honest(){
+                console.log("Akash is honest child, because its inherit properties from his father (Ishan)");
+            }
+        }
+
+        let boy = new Akash();
+        boy.honest();
+
+
+        // Getters and Setters
+        class A{
+            constructor(name){
+                this.name = name;
+                this.age = 20;
+            }
+            get getName(){
+                return this.name;
+            }
+            set setName(name){
+                this.name = name;
+            }
+            get getAge(){
+                return this.age;
+            }
+            set setAge(age){
+                this.age = age;
+            }
+        }
+        let a = new A("Ishan");
+        console.log(a.getName);
+        console.log(a.getAge);
+        a.setName = "Akash";
+        console.log(a.getName);
+        a.setAge = 25;
+        console.log(a.getAge);
+
+
+        // Abstraction
+        class Car{
+            constructor(){
+                this.speed = 0;
+            }
+            accelerate(amount){
+                this.speed += amount;
+                return "Speed increasing : " + this.speed;
+            }
+        }
+        const myCar = new Car();
+        console.log(myCar.accelerate(50));
+        console.log(myCar.accelerate(30));
+        
+
+    </script>
+</body>
+</html>

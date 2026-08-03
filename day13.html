@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Target and tables</title>
+</head>
+<style>
+    .table {
+        display: flex;
+        justify-content: center;
+    }
+
+    .name,
+    .mobile {
+        background-color: aqua;
+    }
+
+    .marquee {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <marquee behavior="alternate" scrollamount="50">
+        <span style="font-size: 40px;">
+            <!-- <a href="https://vikascs-it.github.io/HTML-Frameset/" target="github">Open Frameset Project</a><br /> -->
+             <img src="nature.webp" height="40px" width="60px" />
+        </span>
+    </marquee><br />
+    <marquee behavior="alternate" scrollamount="50">
+        <div>
+            this is div
+        </div>
+    </marquee><br />
+
+    <!-- <span style="display: flex; font-size: 40px; justify-content: center;">
+        <a href="https://vikascs-it.github.io/HTML-Frameset/" target="github">Open Frameset Project</a><br />
+    </span> -->
+    <br />
+    <iframe src="" name="github" width="100%" height="300px"></iframe>
+
+    <br />
+    <div class="table">
+        <table border="1">
+            <caption>Table Colgroup</caption>
+            <colgroup>
+                <col class="name" />
+                <col class="roll" />
+                <col class="mobile" />
+                <col class="age" />
+            </colgroup>
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Mobile Number</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Vikas</td>
+                <td>Akash</td>
+                <td>Vishal</td>
+                <Td>Rajan</td>
+            </tr>
+            <tr>
+                <td>Vikas</td>
+                <td>Akash</td>
+                <td>Vishal</td>
+                <Td>Rajan</td>
+            </tr>
+            <tr>
+                <td>Vikas</td>
+                <td>Akash</td>
+                <td>Vishal</td>
+                <Td>Rajan</td>
+            </tr>
+            <tr>
+                <td>Vikas</td>
+                <td>Akash</td>
+                <td>Vishal</td>
+                <Td>Rajan</td>
+            </tr>
+        </table>
+    </div>
+    <marquee>This is marquee tag</marquee>
+    <marquee direction="right">This is marquee tag</marquee>
+    <div class="marquee">
+        <marquee direction="up">This is marquee tag</marquee>
+        <marquee direction="down">This is marquee tag</marquee>
+    </div>
+    <br />
+    <hr />
+    <marquee behavior="alternate">This is marquee tag</marquee>
+    <marquee behavior="slide" direction="right">This is marquee tag</marquee>
+</body>
+
+</html>

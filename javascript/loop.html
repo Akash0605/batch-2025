@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <p>Looping Statement</p>
+    <script>
+        // For loop
+
+        console.log("This print 1-10 numbers")
+        // for(var i = 1; i <= 4; i++){
+        //     console.log(i);
+        // }
+        for(var i = 1; i <= 4; i = i + 1){
+            console.log(i);
+        }
+        console.log("Outer 1: ",i);
+
+        console.log("This pring 10-1 numbers")
+        for(var i = 4; i >= 1; i--){
+            console.log(i);
+        }
+        console.log("Outer 2: ",i)
+        
+        console.log("This pring table of 2")
+        // for(var i = 2; i <= 20; i = i + 2){
+        //     console.log(i);
+        // }
+        let a = 2;
+        for(var i = 1; i <= 10; i++){
+            let x = a * i;
+            console.log(x);
+        }
+        console.log("Outer 2: ",i)
+
+        let b = 2;
+        for(var i = 1; i <= 10; i++){
+            let x = b * i;
+            if(x == 10) console.log(x);
+        }
+        console.log("Outer 2: ",i)
+
+        let c = 2;
+        for(var i = 1; i <= 10; i++){
+            let x = c * i;
+            if(x == 10) break;
+            console.log(x);
+        }
+        console.log("Outer 2: ",i)
+        
+        let d = 2;
+        for(var i = 1; i <= 4; i++){
+            let x = d * i;
+            if(x == 4) {
+                continue;
+            }
+            console.log(x);
+        }
+        console.log("Outer 2: ",i)
+
+
+        for( let i = 0; i < 5; i++){
+            console.log("Outer : ", i);
+            for(let j = 0; j < 5; j++){
+                console.log("Inner : ", j);
+            }
+
+        }
+
+        // While Loop
+        console.log("\nThis is While Loop.")
+        let num = 0;
+        while(num <= 6){
+            console.log("Number is : ", num);
+            num++;
+        }
+
+        let aa = 0;
+        while(aa <= 6){
+            // let aa = 0;      // infinite
+            console.log("Number is : ", aa);
+            aa++;
+        }
+
+        let bb = 0;
+        while(bb <= 6){
+            // bb = 0;      //infinite
+            console.log("Number is : ", bb);
+            bb++;
+        }
+
+        document.write("Factorial program.<br >")
+        let fact = 1, n = 6;
+        let temp = n;
+        while(n > 0){
+            fact = fact * n;
+            document.write(fact , " ");
+            n--;
+        }
+        document.write("<br />Factorial of ", temp ," is : ", fact);
+
+        // 1  
+        // 2 2  
+        // 3 3 3  
+        // 4 4 4 4  
+        // 5 5 5 5 5
+
+        for(let i = 1; i<=5; i++){
+            let temp = "";
+            for(let j = 1; j <= i; j++){
+                temp += i + " ";
+            }
+            console.log(temp);
+        }
+        
+        // 1 
+        // 1 2 
+        // 1 2 3 
+        // 1 2 3 4 
+        // 1 2 3 4 5
+        
+        for(let i = 1; i<=5; i++){
+            let temp = "";
+            for(let j = 1; j <= i; j++){
+                temp += j + " ";
+            }
+            console.log(temp);
+        }
+
+        console.log("Do-while Loop")
+        let ax = 0;
+        do{
+            console.log(ax);
+            ax++;
+        } while(ax <= 5)
+
+        console.log("ForEach Loop")
+        // const number = [10,2,35,41,5];
+        const number = ['a', 'b', 'c', 'd', 'vikas'];
+        number.forEach(num => console.log(num));
+        
+
+        console.log("=== For .... in Loop ===")
+        let person = {id:1000, name:"vikas", age:20};
+        for(let i in person){
+            console.log(i + ' : ' + person[i]);
+        }
+
+        console.log("=== For ... of Loop ===");
+        let numbers = [100, 200, 300, 400, 500];
+        for(let i of numbers){
+            console.log(i);
+        }
+
+        // Print only vowels from a-z.
+        console.log("Print only vowels from a-z")
+        let az = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+        for(let i of az){
+            if(i == 'a' || i == 'e' || i == 'o' || i == 'i' || i == 'u'){
+                console.log(i)
+            }
+        }
+
+        // Print all number between 1-100 whose divisible by 3 and 7 only.
+        console.log("Print number whose divisible by 3 and 7 only")
+        for(let i = 1; i<=100; i++){
+            if(i % 3 == 0 && i % 7 == 0) console.log(i)
+        }
+
+        // Print only consonents from a-z.
+        console.log("Print only consonent from a-z")
+        let zz = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+        for(let i of zz){
+            if(i == 'a' || i == 'e' || i == 'o' || i == 'i' || i == 'u'){
+                continue;
+            }
+            console.log(i)
+        }
+
+
+    </script>
+</body>
+</html>

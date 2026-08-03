@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Day 14 HTML Practice</title>
+    <style>
+        #first{
+            color: green;
+            background-color: red;
+        }
+
+        .first{
+            color: blue;
+            background-color: yellow;
+            font-size: 50px !important;
+        }
+
+        #second{
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #div1{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        #div2{
+            border: 2px dashed blue;
+            padding: 10px;
+            margin: 10px;
+        }
+        .rawan{
+            background-color: lightgray;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: blue;">Welcome to Day 14 HTML Practice</h1><br />
+
+    <p id="first" style="font-size: 20px; text-align: center;">Please fill out the form below:</p>
+    <p class="first" style="font-size: 16px; text-align: center;">Make sure to enter accurate information.</p>
+    <p id="second" class="first" style="font-size: 16px; text-align: center; color: red;">All fields are mandatory.</p>
+    <p class="first" style="font-size: 16px; text-align: center; font-weight: bold;">Thank you for your cooperation!</p>
+
+    <div>
+        <div id="div1">
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+        </div>
+        <div id="div2">
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+            <div class="rawan"><span>first</span></div>
+        </div>
+    </div>
+
+
+    <form>
+        <label for="name" style="font-size: 20px;">Name:</label>
+        <input id="name" type="text" id="name" name="name" style="font-size: 20px;" /><br /><br />
+        <label for="email" style="font-size: 20px;">Email:</label>
+        <input id="email" type="email" id="email" name="email" style="font-size: 20px;" /><br /><br />
+        <label for="password" style="font-size: 20px;">Password:</label>
+        <input type="password" id="password" name="password" style="font-size: 20px;" /><br /><br />
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <textarea rows="4" cols="50" style="font-size: 20px;">
+    </textarea>
+    <br /><br />
+    <button onclick="alert('Button clicked!')" style="font-size: 20px;">Submit</button>
+    <script>
+        function changeColor() {
+            document.body.style.backgroundColor = "red";
+            document.body.style.color = "white";
+        }
+    </script>
+This this changable font color.
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseleave="this.start();" scrollamount="10" style="margin-top: 20px;">
+        <span style="font-size: 30px; color: green;">
+            This is a sample marquee text for Day 14 practice!
+        </span>
+    </marquee>
+    <button onclick="changeColor()" style="font-size: 20px; margin-top: 20px;">Change Background Color</button>
+
+</html>

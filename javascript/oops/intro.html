@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <h1>Introduction of OOP's</h1>
+        <br />
+        <button onclick="myCar.showBrand()">Show Car Brand</button>
+        <button onclick="youBrand.showBrand()">Show Car Brand</button>
+        <script>
+            // OOP's: Object Oriented Programming
+            <!-- Inheritance, Polymorphism, Encapsulation -->
+
+            class Person{
+                constructor(value, value1){
+                    this.value = value;
+                    this.value1 = value1;
+                }
+                greet(){
+                    console.log("This is method inside class");
+                }
+
+                display(){
+                    console.log("Print value : " + this.value + ", " + this.value1);
+                }
+
+                add(){
+                    var a = 3;
+                    var b = 5;
+                    console.log(a, " + ",b," = ", a+b);
+                }
+            }
+
+            let name = new Person(100, 200);
+            console.log("\n This is by name object:");
+            name.greet();
+            name.add();
+            name.display();
+            let calc = new Person(4, 10);
+            console.log("\n This is by calc object:");
+            calc.add();
+            calc.greet();
+            calc.display();
+
+            // Constructor
+            class Car{
+                constructor(brand)
+                {this.brand = brand;}
+
+                showBrand(){
+                    alert("Car brand : " + this.brand);
+                }
+            }
+            let myCar = new Car("Suzuki");
+            let youBrand = new Car("Toyota");
+
+            // Classes
+            class Animal{
+                constructor(name){
+                    this.name = name;
+                    console.log("This is first - name : " + this.name);
+                }
+
+                display(){
+                    console.log("Animal name is : " + this.name);
+                }
+            }
+
+            let anim1 = new Animal("Python");
+            let anim2 = new Animal("Vikas", 20);
+            anim1.display();
+            anim2.display();
+
+            // instance vs static methods
+            class Vikas{
+
+                display(num){
+                    console.log("this is instance method")
+                    return num*num;
+                }
+
+                static show(a, b){
+                    console.log("This is static method");
+                    return a+b;
+                }
+            }
+
+            let boy = new Vikas(4);
+            let square = boy.display(4);
+            console.log("Square value : " + square)
+            // boy.show(4, 5)  // static method don't call through object
+            console.log(Vikas.show(4,6)) // static method call through only class
+
+
+            // Instance method
+
+        </script>
+        
+ </body>
+ </html>

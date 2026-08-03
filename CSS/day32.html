@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrolling and Visibility</title>
+        <style>
+            .first {
+                width: 500px;
+                height: 50px;
+                border: 2px solid red;
+                padding: 29px;
+                overflow: scroll;
+            }
+
+            .pa {
+                overflow: auto;
+                display: block;
+                height: 500px;
+                border: 2px dashed blue;
+                font-size: 100px;
+            }
+            .second {
+                height: 40px;
+                border: 5px dashed red;
+                overflow-y: auto;
+            }
+            .third {
+                height: 40px;
+                width: 500px;
+                margin-top: 20px;
+                border: 5px dashed red;
+                white-space: nowrap;
+                overflow-x: auto;
+            }
+            .forth {
+                height: 40px;
+                width: 100%;
+                margin-top: 20px;
+                border: 5px dashed red;
+                overflow: visible;
+            }
+            .fifth {
+                border: 10px solid green;
+                padding: 20px;
+                display: flex;
+                gap: 20px;
+            }
+
+            .fifth div {
+                width: 200px;
+                height: 100px;
+                border: 2px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+            .hidden:hover {
+                visibility: visible !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+            <p>Lorem ipsum dolor sit .</p>
+        </div>
+        <div class="fifth">
+            <div>guava</div>
+            <div class="hidden">mango</div>
+            <div>grapes</div>
+            <div>banana</div>
+        </div>
+        <p class="pa"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa tempore odio, nihil deserunt officiis accusantium doloribus officia blanditiorem ipsum dolor sit amet consecte ipsum dolor sit amet consectetur adipisicing elit. Officia et blanditiis facere? Harur a\? Harum, fuga  ipsum dolor sit amet consectetur adipisicing elit. Officia et blanditiis facere? Harum, fuga  ipsum dolor si nemo distinctio vitae, minus natus accusamusis nostrum ex distinctio! Tenetur, ad quas maxime sit officia doloremque in eum?</p>
+        <div class="second">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+        </div>
+        <div class="third">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+        </div>
+        <div class="forth">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam vitae inventore reiciendis amet incidunt dignissimos perspiciatis, quasi quaerat beatae vero iusto recusandae corrupti voluptates earum tenetur consequatur laboriosam expedita at.
+        </div>
+    </body>
+</html>

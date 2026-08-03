@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="e-us">
+    <head>
+    <title>Demo Page Day 18 | Cascading Style Sheet</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <style alink="red" vlink="blue" link="green">
+        div p {
+            color: blue;
+        }
+        div h1 {
+            color: green;
+        }
+
+        [href] {
+            color: rgb(43, 0, 255);
+        }
+
+        img[type="src"] {
+            border: 2px solid black;
+            height: auto;
+            width: 150px;
+        }
+
+        img{
+            width: 100px;
+            height: auto;
+            opacity: 0.6;
+            rotate: 135deg;
+        }
+
+        div h1{
+            opacity: 0.2;
+        }
+        a[href^="day"] {        /* Starts with "day" */
+            font-size: 20px;
+        }
+
+        .main{
+            font-size: 20px;
+            color: red;
+        }
+
+        .head{
+            font-weight: bold;
+        }
+
+        p[class~="head"] {      /* Contains the word "head" */
+            text-decoration: underline;
+        }
+
+        [class|="en"] {          /* lang attribute starts with "en" */
+            background-color: yellow;
+        }
+
+        div > p, div > h1 {
+            font-style: italic;
+        }
+
+        .check:active{
+            color: orange;
+        }
+        .check:visited{
+            color: purple;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Day 18</h1>
+        </header>
+        <aside>
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="day14.html" target="main">Section 1</a></li>
+                <li><a href="sday16.html"  target="main">Section 2</a></li>
+                <li><a href="day17.html" target="main">Section 3</a></li>
+                <li><a href="day10.html" target="main">Section 4</a></li>
+                <li><a href="day12.html" target="main">Section 5</a></li>
+                <li><a href="day15.html" target="main">Section 6</a></li>
+            </ul>
+        </aside>
+        <main>
+            <a class="check" href="day14.html" target="_blank">Section 1</a>
+            <a class="check" href="day16lsdlkjdlsd.html" target="_blank">Section 1</a>
+            <img type="src" src="nature.webp" alt="Placeholder Image">
+            <iframe name="main" style="width:100%; height:100px;"></iframe>
+            <div>
+                <p class="main head en-us">This is a sidebar content area.</p>
+                <p class="en-us">It can contain links or other information.</p>
+                <h1>vikas</h1>
+                <p>vikas</p>
+            </div>
+            <p>This paragraph is outside the div and should have default color.</p>
+        </main>
+    </body>
+</html>

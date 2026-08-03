@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4</title>
+</head>
+<body>
+    <script>
+        var abc = 10 // Global variable
+        if(1){
+            let xyz = 20; // Local variable
+            console.log("Inside if block : ",xyz);  // Local variable can be accessed inside if block
+            console.log("Inside if block : ",abc);  // Global variable can be accessed inside if block
+        }
+        console.log(abc) // Global variable can be accessed outside if block
+        console.log(xyz) // Local variable cannot be accessed outside if block
+    </script>
+</body>
+</html>

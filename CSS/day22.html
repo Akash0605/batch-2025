@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Fonts - Day 22</title>
+        <style>
+            .image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 400px;
+                border: none;
+            }
+            img{
+                height: auto;
+                display: flex;
+                width: 500px;
+                border: 5px solid rgb(255, 0, 0);
+                /* border-radius: 20%; */
+                opacity: 0.3;
+                transition-duration: 2.8s;
+            }
+
+            img:hover {
+                border-radius: 50%;
+                width: 500px;
+                height: 500px;
+            }
+
+            a{
+                font-size: 30px;
+            }
+            a:link{
+                color: green;
+            }
+
+            a:visited {
+                color: aqua;
+            }
+            
+            a:hover {
+                color: black;
+                text-decoration: 5px;
+
+                font-size: xx-large;
+            }
+
+            a:active {
+                color: orange;
+                text-decoration-color: blue;
+            }
+
+            .first{
+                width: 500px;
+                height: 100px;
+                border: 4px double red;
+                border-style: inset;
+                border-top-width: 10px;
+                border-top-style: double;
+                border-top-color: aqua;
+                border-left-color: blue;
+            }
+            .first:hover{
+                border-style: dotted;
+                font-size: 50px;
+                background-color: blueviolet;
+                overflow: hidden;
+                overflow: auto;
+
+            }
+            .second{
+                width: 500px;
+                height: auto;
+                border: 4px double pink;
+                border-top-color: red;
+                border-top-width: 6px;
+                border-top-style: dotted;
+                border-bottom-style: none;
+                border-top-right-radius: 40px;
+            }
+            div{
+                border: 4px solid red;
+                width: 300px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .div{
+                border: 4px solid black;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to Day 22 of CSS Learning</h1>
+        <a href="day17.html">17</a>
+        <a href="day18.html" target="_blank">18</a>
+        <a href="day19.html" target="_blank">19</a>
+        <a href="day20.html" target="_blank">20</a>
+        <a href="day21.html" target="_blank">21</a>
+        <p class="first">In this lesson, we will explore more advanced text properties and how they can enhance the presentation of our web content.</p>
+
+        <div class="image"><img src="C:\Users\Dell\Desktop\Batch 2025\nature.webp" alt="CSS Fonts Illustration" /></div>
+
+        <p class="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe delectus quisquam illo dolor libero officiis tempore eius, nisi laboriosam possimus recusandae facilis voluptates eum iusto laudantium veritatis sint laborum. Aperiam.</p>
+
+        <div>
+            <div class="div">
+
+            </div>
+        </div>
+    </body>
+</html>

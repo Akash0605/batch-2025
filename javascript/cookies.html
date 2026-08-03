@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <h1>Cookies</h1>
+
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">Get Cookie</button>
+
+    <p id="output"></p>
+
+    <script>
+        function setCookie(){
+            document.cookie = "user=Vikas; expires=Tue, 28 Jul 2026 18:30:00 UTC; path=/";
+            document.getElementById("output").innerHTML = "Cookie Set";
+        }
+        function getCookie(){
+            document.getElementById("output").innerHTML = "Stored Cookie: " + document.cookie;
+        }
+    </script>
+</body>
+</html>

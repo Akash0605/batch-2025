@@ -1,0 +1,412 @@
+JavaScript Definitions and Examples
+
+1. Synchronous JavaScript
+
+Definition: Runs code line by line.
+
+Example:
+
+    console.log('A');
+    console.log('B');
+
+Output: A B
+
+2. Asynchronous JavaScript
+
+Definition: Runs long tasks without blocking.
+
+Example:
+
+    console.log('Start');setTimeout(()=>console.log('Later'),1000);console.log('End');
+
+Output: Start End Later
+
+3. Event Loop
+
+Definition: Executes queued async callbacks after sync code.
+
+Example:
+
+    console.log(1);setTimeout(()=>console.log(2),0);console.log(3);
+
+Output: 1 3 2
+
+4. JavaScript Callbacks
+
+Definition: Function passed to another function.
+
+Example:
+
+    function f(cb){cb()} f(()=>console.log('Done'));
+
+Output: Done
+
+5. setTimeout()
+
+Definition: Runs once after delay.
+
+Example:
+
+    setTimeout(()=>console.log('Hi'),1000);
+
+Output: Hi
+
+6. setInterval()
+
+Definition: Runs repeatedly.
+
+Example:
+
+    let i=setInterval(()=>console.log('Hi'),1000);
+
+Output: Hi…
+
+7. clearTimeout()
+
+Definition: Cancels timeout.
+
+Example:
+
+    let t=setTimeout(...);clearTimeout(t);
+
+Output: No output
+
+8. clearInterval()
+
+Definition: Stops interval.
+
+Example:
+
+    let i=setInterval(...);clearInterval(i);
+
+Output: Stopped
+
+9. Strict Mode
+
+Definition: Enables strict rules.
+
+Example:
+
+    "use strict"; x=5;
+
+Output: ReferenceError
+
+10. Garbage Collection
+
+Definition: Removes unused memory.
+
+Example:
+
+    let a={};a=null;
+
+Output: Object eligible
+
+11. Memory Leaks
+
+Definition: Unused memory retained.
+
+Example:
+
+    arr.push(new Array(1000));
+
+Output: Memory grows
+
+12. Debouncing and Throttling
+
+Definition: Limit frequent function calls.
+
+Example:
+
+    debounce(search,300);
+
+Output: One call
+
+13. Execution Context
+
+Definition: Environment for code execution.
+
+Example:
+
+    function test(){}
+
+Output: Context created
+
+14. Creating Date Objects
+
+Definition: Create Date object.
+
+Example:
+
+    let d=new Date();
+
+Output: Current date
+
+15. getFullYear()
+
+Definition: Returns year.
+
+Example:
+
+    d.getFullYear();
+
+Output: 2026
+
+16. getMonth()
+
+Definition: Returns month (0-11).
+
+Example:
+
+    d.getMonth();
+
+Output: 6
+
+17. getDate()
+
+Definition: Returns day.
+
+Example:
+
+    d.getDate();
+
+Output: 28
+
+18. getDay()
+
+Definition: Returns weekday.
+
+Example:
+
+    d.getDay();
+
+Output: 2
+
+19. getHours()
+
+Definition: Returns hour.
+
+Example:
+
+    d.getHours();
+
+Output: 18
+
+20. getMinutes()
+
+Definition: Returns minutes.
+
+Example:
+
+    d.getMinutes();
+
+Output: 30
+
+21. getSeconds()
+
+Definition: Returns seconds.
+
+Example:
+
+    d.getSeconds();
+
+Output: 15
+
+22. getMilliseconds()
+
+Definition: Returns milliseconds.
+
+Example:
+
+    d.getMilliseconds();
+
+Output: 500
+
+23. setFullYear()
+
+Definition: Sets year.
+
+Example:
+
+    d.setFullYear(2030);
+
+Output: 2030
+
+24. setMonth()
+
+Definition: Sets month.
+
+Example:
+
+    d.setMonth(11);
+
+Output: December
+
+25. setDate()
+
+Definition: Sets day.
+
+Example:
+
+    d.setDate(25);
+
+Output: 25
+
+26. setHours()
+
+Definition: Sets hour.
+
+Example:
+
+    d.setHours(10);
+
+Output: 10
+
+27. setMinutes()
+
+Definition: Sets minutes.
+
+Example:
+
+    d.setMinutes(45);
+
+Output: 45
+
+28. setSeconds()
+
+Definition: Sets seconds.
+
+Example:
+
+    d.setSeconds(50);
+
+Output: 50
+
+29. setMilliseconds()
+
+Definition: Sets milliseconds.
+
+Example:
+
+    d.setMilliseconds(999);
+
+Output: 999
+
+30. charAt()
+
+Definition: Returns character at index.
+
+Example:
+
+    "Java".charAt(1);
+
+Output: a
+
+31. charCodeAt()
+
+Definition: Returns Unicode.
+
+Example:
+
+    "A".charCodeAt(0);
+
+Output: 65
+
+32. toUpperCase()
+
+Definition: Uppercase string.
+
+Example:
+
+    "js".toUpperCase();
+
+Output: JS
+
+33. toLowerCase()
+
+Definition: Lowercase string.
+
+Example:
+
+    "JS".toLowerCase();
+
+Output: js
+
+34. trim()
+
+Definition: Removes spaces both ends.
+
+Example:
+
+    " hi ".trim();
+
+Output: hi
+
+35. trimStart()
+
+Definition: Removes leading spaces.
+
+Example:
+
+    "hi ".trimStart();
+
+Output: hi
+
+36. trimEnd()
+
+Definition: Removes trailing spaces.
+
+Example:
+
+    "hi ".trimEnd();
+
+Output: hi
+
+37. substring()
+
+Definition: Extract by indexes.
+
+Example:
+
+    "Java".substring(1,3);
+
+Output: av
+
+38. substr()
+
+Definition: Extract by start,length (deprecated).
+
+Example:
+
+    "JavaScript".substr(4,6);
+
+Output: Script
+
+39. repeat()
+
+Definition: Repeats string.
+
+Example:
+
+    "Hi".repeat(3);
+
+Output: HiHiHi
+
+40. padStart()
+
+Definition: Pads start.
+
+Example:
+
+    "7".padStart(3,"0");
+
+Output: 007
+
+41. padEnd()
+
+Definition: Pads end.
+
+Example:
+
+    "JS".padEnd(5,".");
+
+Output: JS…

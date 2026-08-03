@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="id">Select by ID</h1>
+    <p id= "place"></p>
+
+    <h2 class="class">Select by class</h2>
+    <div></div>
+
+    <p class="query">This is 
+    <p class="query">This is secondfirst</p></p>
+    <button onclick="selectQuery()">Show tags</button>
+    <button onclick="selectQueryAll()">All Selector</button>
+    <button onclick="setAttrib()">Set Attribute</button>
+    <button onclick="getAttrib()">Get Attribute</button>
+    <button onclick="removeAttrib()">Remove Attribute</button>
+    <button onclick="addClassList()">Add Class List</button>
+    <button onclick="removeClassList()">Remove Class List</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <br />
+    <br />
+    <br />
+    
+    <button id="cre" onclick="createEle()">Create Element</button>
+    <button onclick="remChild()">Remove Child</button>
+
+    <p id="classLi" class="a">Class List</p>
+    <p id="c" class="a c">Class List</p>
+
+    <br />
+    <br />
+    <br />
+    
+    <section id="parent">
+        <div id="child-div">This is div tag</div>
+    </section>
+
+    <br />
+    <br />
+    <br />
+    <button id="eHandle">Add Event</button>
+    <button id="pHandle">print message</button>
+    <button id="rHandle">Remove Event</button>
+
+    <div id="eHandle1" class="eHandle eHandle1">
+
+    </div>
+    <br />
+    <br />
+    
+    <style>
+        .eHandle{
+            width: 100px;
+            height: 100px;
+            border: 2px solid red;
+            border-radius: 1rem;
+            background-color: green;
+        }
+        .eHandle1{
+            width: 100px;
+            height: 100px;
+            border: 2px solid green;
+            border-radius: 1rem;
+            background-color: red;
+        }
+
+        .a{
+            display: none;
+        }
+        .c{
+            color: red;
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 2px solid green;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+        .boxes{
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        var el = document.getElementById("id")
+        var place = document.getElementById("place");
+        var let = place.innerHTML = el.innerText;
+        console.log(el.innerText)
+        document.write(el.innerText)
+        document.write("<br />")
+
+        var cl = document.getElementsByClassName("class");
+        var clText = cl.innerText;
+        var name = "Vikas";
+        var full = cl.innerHTML = name;
+        document.write(full)
+        console.log(cl)
+        console.log(clText)
+
+
+        document.write("<br /><br />")
+        var tags = document.getElementsByTagName("div");
+        // var settag = tags.setAttribute("class", "attr");
+        console.log(tags)
+        var tagClass = tags.innerHTML = "Selects the first element that matches a CSS selector.<br />";
+        document.write(tagClass);
+
+        function selectQuery(){
+            var qs = document.querySelector(".query").innerHTML = "Updated by querySelector";
+        }
+
+        function selectQueryAll(){
+            var qsa = document.querySelectorAll(".query");
+            qsa.forEach(i => i.innerHTML = "Updated by Query Selector All");
+        }
+
+        function setAttrib(){
+            var aa = document.querySelector(".query");
+            console.log(aa);
+            aa.setAttribute("style", "color: red");
+            var bb = document.querySelector(".query");
+            console.log(bb);
+
+        }
+
+        function getAttrib(){
+            var aa = document.querySelector(".query");
+            console.log(aa)
+            var bb = aa.getAttribute("class");
+            console.log(bb)
+        }
+
+        function removeAttrib(){
+            var aa = document.querySelector(".query");
+            console.log(aa)
+            var bb = aa.removeAttribute("class");
+            var cc = document.querySelectorAll("p");
+            cc.forEach(i => console.log(i))
+        }
+
+
+        function addClassList(){
+            var aa = document.getElementById("classLi");
+            console.log(aa)
+            aa.classList.add("b");
+            var bb = document.getElementsByClassName("a");
+            console.log(bb)
+
+        }
+
+        function removeClassList(){
+            var aa = document.getElementById("c");
+            aa.classList.remove("c");
+            console.log(aa)
+        }
+
+        // function toggleClass(){
+        //     var aa = document.getElementById("c");
+        //     console.log(aa);
+        //     aa.classList.toggle("c")
+        
+        // }
+
+        document.write("<br />")
+        document.write("<br />")
+
+        function createEle() {
+            var parent = document.createElement("div");
+
+            parent.setAttribute("class", "box");   // set class
+            parent.setAttribute("id", "box");   // set box
+            parent.innerHTML = "Vikas";            // add text
+
+            parent.classList.add("boxes")
+
+            var child = document.createElement("p");
+            console.log(child)
+
+            parent.appendChild(child);     // add to page
+
+            var h3 = document.createElement("h3");
+
+            var h2 = document.createElement("h2");
+
+            console.log(h2)
+            parent.insertBefore(h2, child);
+
+            parent.insertBefore(h3, h2);
+
+            document.body.appendChild(parent);     // add to page
+
+            console.log(parent);
+        }
+
+        function toggleClass() {
+            var aa = document.querySelectorAll("#box");
+            console.log(aa);
+            aa.forEach(element => {
+                element.classList.toggle("box")
+            });
+        }
+
+        function remChild(){
+            var parent = document.getElementById("parent");
+            var child = document.getElementById("child-div");
+            
+            console.log(parent);
+            
+            // parent.removeChild(child);
+            
+            parent.remove();
+            
+            console.log(parent);
+        }
+
+        let eveHandle = document.getElementById("eHandle");
+        eveHandle.addEventListener("click", function(){
+            document.getElementById("eHandle1").classList.toggle("eHandle1");
+
+        })
+
+        // Remove Event Listener
+        function handleClick() {
+            console.log("Button clicked");
+        }
+        const remHandle = document.getElementById("rHandle");
+        const printHandle = document.getElementById("pHandle");
+        // Add event listener
+        printHandle.addEventListener("click", handleClick);
+        // Remove event listener
+        remHandle.removeEventListener("click", handleClick);
+
+
+
+
+    </script>
+</body>
+</html>

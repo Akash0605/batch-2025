@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <noscript>
+        <h1>JavaScript is not enabled in your browser.</h1>
+    </noscript>
+    <button onclick="add(5,8)">Click me</button>
+    <script>
+        document.write("This is my first js code");
+        console.log("This is my first js code");
+
+        var a = 10; var b = 20;
+        var d = a+b;
+        var c = "vikas";
+        var e = true;
+        var f = false;
+
+        document.write("<br>==== Variables ====");
+        document.write("<br>a = ",a);
+        document.write("<br>b = ",b);
+        document.write("<br>c = ",c);
+        document.write("<br>d = ",d);
+        document.write("<br>e = ",e);
+        document.write("<br>f = ",f);
+
+        document.write("<br>==== Data Types ====");
+        document.write("<br>Type of a = ",typeof a);
+        document.write("<br>Type of b = ",typeof b);
+        document.write("<br>Type of c = ",typeof c);
+        document.write("<br>Type of d = ",typeof d);
+        document.write("<br>Type of e = ",typeof e);
+        document.write("<br>Type of f = ",typeof f);
+
+        document.write("<br>==== Arithmetic Operators ====");
+        document.write("<br>(a + b) = ",a+b);
+        document.write("<br>(a - b) = ",a-b);
+        document.write("<br>(a * b) = ",a*b);
+        document.write("<br>(a / b) = ",a/b);
+        document.write("<br>(a % b) = ",a%b);
+
+        document.write("<br>==== Assignment Operators ====");
+        document.write("<br>z = ",10);
+        document.write("<br>d += 5 = ",d += 5);
+        document.write("<br>d -= 5 = ",d -= 5);
+        document.write("<br> Add 5 to d = ",d+5);
+        document.write("<br> After add 5 into d = ",d);
+        document.write("<br>d *= 5 = ",d *= 5);
+        document.write("<br>d /= 5 = ",d /= 5);
+        document.write("<br>d %= 5 = ",d %= 5);
+        document.write("<br>d = ",d);
+        document.write("<br>d++ = ",d++);
+        document.write("<br>d-- = ",d--);
+        document.write("<br>--d = ",--d);
+        document.write("<br>++d = ",++d);
+        document.write("<br>++d + 5 + d++ = ",++d + 5 + d++);
+
+        document.write("<br>==== Comparison Operators ====");
+        document.write("<br>(a == b) = ",a == b);
+        document.write("<br>(a != b) = ",a != b);
+        document.write("<br>(a > b) = ",a > b);
+        document.write("<br>(a < b) = ",a < b);
+        document.write("<br>(a >= b) = ",a >= b); // Greater than or equal to
+        document.write("<br>(a <= b) = ",a <= b);
+        document.write("<br>(a === b) = ",a === b);
+        document.write("<br>(a === c) = ",a === c);
+        document.write("<br>(a !== b) = ",a !== b);
+        document.write("<br>(a !== c) = ",a !== c);
+
+        document.write("<br>==== Logical Operators ====");
+        document.write("<br>(a > 5 && b > 15) = ",(a > 5 && b > 15));
+        document.write("<br>(a > 15 || b > 15) = ",(a > 15 || b > 15));
+        document.write("<br>(!(a < 5)) = ",!(a < 5));
+
+        document.write("<br>Addition of a and b is : ",a+b);
+
+        document.write("<br>==== Turnary Operator or Conditional Operator ====");
+        document.write("<br>(a > b) ? ",(a > b) ? a : b);
+        document.write("<br>(a < b) ? ",(a < b) ? ("a = ",a) : ("b = ",b));
+        document.write("<br>None zero value: 5 ? ", 5 ? ("a = ",a) : ("b = ",b));
+
+        document.write("<br />a = ",a);
+        document.write("<br />b = ",b);
+        document.write("<br />c = ",c);
+        document.write("<br />d = ",d);
+        document.write("<br />e = ",e);
+        document.write("<br />f = ",f);
+        console.log(a);
+        console.log(b);
+
+        console.log(add(5,8));
+
+        function add(x,y){
+            console.log("Local variable : ", x,a)
+            return x+y;
+        }
+
+        console.log("Local variable : ", x,y)
+    </script>
+    <script>
+        var abc = 10 // Global variable
+        if(1){
+            let xyz = 20; // Local variable
+            console.log("Inside if block : ",xyz);  // Local variable can be accessed inside if block
+            console.log("Inside if block : ",abc);  // Global variable can be accessed inside if block
+        }
+        console.log(abc) // Global variable can be accessed outside if block
+        console.log(xyz) // Local variable cannot be accessed outside if block
+    </script>
+</body>
+</html>

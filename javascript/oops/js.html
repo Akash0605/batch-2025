@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="cars.startEngine();">engein</button>
+    <button onclick="model.stopEngein()">engein</button>
+    <button onclick="year.displayinfo()">engein</button>
+    <script>
+        class name {
+            introduce () {
+                console.log("Hi, I'm john and i am 18 years old.")
+            }
+
+            study (){
+                console.log("John is studying")
+            }
+        }
+
+        let john = new name ();
+        john.introduce();
+        john.study();
+
+        class car {
+
+            constructor (cars, model, year) {
+                this.cars = cars;
+                this.model = model;
+                this.year = year;
+            }
+            
+            startEngine () {
+                console.log("this is car brand:" + this.cars);
+            }
+            stopEngein () {
+               console.log("this is model:" + this.model);
+            }
+            displayinfo () {
+                console.log("this is car year:" + this.year);
+            }
+    
+
+        }
+        let cars = new car("suzuki");
+        let model = new car("toyota", "zip");
+        let year = new car("2003");
+
+        // car.startEngine();
+        // car.stopEngein();
+        // car.displayinfo();
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Type box value</title>
+</head>
+
+<body>
+    <h1>Typebox Example</h1><br />
+    <form action="#" method="">
+        <fieldset>
+            <legend>User Name</legend>
+            First Name: <input type="text" size="30" value="" name="first-name" />
+            Middle Name: <input type="text" value="Kumar" name="middle-name" readonly/>
+            Last Name: <input type="text" value="" name="last-name" disabled/>
+        </fieldset>
+        <fieldset>
+            <legend>Select Favourite Color</legend>
+            <label>Green <input type="checkbox" value="Green" name="color" checked/></label>
+            <label for="red" />
+            Red <input type="checkbox" id="red" value="Red" name="color" />
+            <label for="blue" />
+            Blue <input type="checkbox" id="blue" value="Blue" name="color" />
+        </fieldset>
+        <fieldset>
+            <legend>Gender</legend>
+            Gender: <input type="radio" name="gender" value="male" checked/> Male
+            <input type="radio" name="gender" value="female" /> Female
+        </fieldset><br />
+
+        Date Range: <input type="date" min="2025-12-20" max="2025-12-26" value="" name="" />
+        Select Color: <input type="color" value="#35f5d5" name="color" />
+        
+
+        <br />
+        <br />
+        <input type="submit" value="ENTER"/>
+    </form>
+</body>
+
+</html>

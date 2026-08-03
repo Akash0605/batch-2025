@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi color</title>
+        <style>
+            .parent{
+                border: 5px dashed blue;
+                display: flex;
+                gap: 10px;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            div{
+                border-radius: 10px;
+            }
+            div div{
+                border-radius: 50%;
+            }
+            .first {
+                width: 300px;
+                height: 200px;
+                border: 2px solid red;
+                background: linear-gradient(orange, white, green);
+            }
+            .second {
+                width: 300px;
+                height: 200px;
+                border: 2px solid black;
+                background: radial-gradient(orange, white, green);
+            }
+            .third {
+                width: 300px;
+                height: 200px;
+                border: 2px solid blue;
+                background: linear-gradient(to right, orange, white, green);
+            }
+            .forth {
+                width: 300px;
+                height: 200px;
+                border: 2px solid green;
+                background: linear-gradient(to left, orange, white, green);
+            }
+            .fifth {
+                width: 300px;
+                height: 200px;
+                border: 2px solid aqua;
+                background: linear-gradient(to top, orange, white, green);
+            }
+            .six {
+                width: 300px;
+                height: 200px;
+                border: 2px solid yellow;
+                background: linear-gradient(to bottom, orange, white, green);
+            }
+            .seven {
+                width: 300px;
+                height: 200px;
+                border: 2px solid purple;
+                background: linear-gradient(to right bottom, orange, white, black, red, blue, yellow, aqua, green);
+            }
+            .eight {
+                width: 300px;
+                height: 200px;
+                border: 2px solid purple;
+                background: linear-gradient(to left bottom, orange, white, green);
+            }
+            .nine {
+                width: 300px;
+                height: 200px;
+                border: 2px solid rgb(192, 190, 190);
+                /* background: linear-gradient(to left top, orange, white, green); */
+                background: white;
+            }
+            .second-r {
+                width: 300px;
+                height: 200px;
+                border: 2px solid black;
+                background: radial-gradient(orange, white, green);
+            }
+            .first-r {
+                width: 300px;
+                height: 200px;
+                border: 2px solid darkgreen;
+                background: radial-gradient(orange, white, rgba(0, 128, 0, 0.134));
+            }
+            /* .seven {
+                width: 300px;
+                height: 200px;
+                border: 2px solid orange;
+                background: radial-gradient(orange, white, green);
+            } */
+
+
+
+
+            .half-circle {
+                width: 100px;
+                height: 50px;
+                background: #e74c3c;
+                border-bottom-left-radius: 100px;
+                border-bottom-right-radius: 100px;
+                margin-top: 20px;
+                rotate: 180deg;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="first">
+
+            </div>
+            <div class="third">
+                
+            </div>
+            <div class="forth">
+                
+            </div>
+            <div class="fifth">
+                
+            </div>
+            <div class="six">
+                
+            </div>
+            <div class="seven">
+                
+            </div>
+            <div class="eight">
+
+            </div>
+            <div class="nine" style="display: flex; align-items: center; justify-content: center;">
+                Egg
+            </div>
+            <div class="first-r">
+    
+            </div>
+            <div class="second-r">
+    
+            </div>
+        </div>
+
+        <div class="half-circle"></div>
+
+    </body>
+</html>

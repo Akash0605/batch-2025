@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables</h1>
+    <button onclick="showVariable()">Show Variable</button>
+    <button onclick="varVariable()">Show Var Variable</button>
+    <button onclick="letVariable()">Show Let Variable</button>
+    <button onclick="constVariable()">Show Const Variable</button>
+    <button onclick="alert('This is Alert box.')">Show Alert Box</button>
+    
+    <script>
+        function showVariable() {
+            var a; // Declaration of variable a
+            a = 10; // Initialization of variable a
+            let b = 20; // Declaration and initialization of variable b
+            const c = 30; // Declaration and initialization of variable c
+            alert("Value of a is: " + a + "\nValue of b is: " + b + "\nValue of c is: " + c);
+        }
+
+
+        function varVariable() {
+            var x = 5;
+            if (true) {
+                var x = 10; // This will overwrite the previous value of x
+                alert("Inside block: " + x); // Output: 10
+            }
+            alert("Outside block: " + x); // Output: 10
+        }
+
+        function letVariable() {
+            let y = 5;
+            if (true) {
+                let y = 10; // This is a different variable, scoped to the block
+                y = 20;
+                alert("Inside block: " + y); // Output: 10
+            }
+            alert("Outside block: " + y); // Output: 5
+        }
+
+        function constVariable() {
+            const z = 5;
+            if (true) {
+                const z = 10; // This is a different variable, scoped to the block
+                z = 20;
+                alert("Inside block: " + z); // Output: 10
+            }
+            alert("Outside block: " + z); // Output: 5
+        }
+
+
+        console.log("This is a log message.");
+
+        // Confirm Method
+        if(confirm("Do you want to proceed?")) {
+            console.log("User chose to proceed.");
+        } else {
+            console.log("User chose to cancel.");
+        }
+
+        // prompt
+        let pro = prompt("Please enter your name:", "");
+        if (pro != null) {
+            console.log("Hello " + pro + "! Welcome to JavaScript.");
+        }
+        else {
+            console.log("User cancelled the prompt.");
+        }
+
+    </script>
+</body>
+</html>
