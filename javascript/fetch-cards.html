@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Cards</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        #status {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fff;
+            width: 260px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img.product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 12px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .card-body h3 {
+            margin: 0;
+            font-size: 17px;
+            color: #222;
+        }
+
+        .category {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a56db;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            width: fit-content;
+            text-transform: capitalize;
+        }
+
+        .rating {
+            color: #f5a623;
+            font-size: 14px;
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2e7d32;
+        }
+
+        .qrcode-wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .qrcode-wrap img {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+    <p id="status">Loading products...</p>
+    <div class="cards-container" id="cardsContainer"></div>
+
+    <script>
+        const API_URL = "https://dummyjson.com/products";
+
+        async function fetchProducts() {
+            const status = document.getElementById("status");
+            const container = document.getElementById("cardsContainer");
+
+            try {
+                const response = await fetch(API_URL);
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                status.remove();
+                renderCards(data.products);
+            } catch (error) {
+                status.textContent = `Failed to load products: ${error.message}`;
+            }
+        }
+
+        function renderCards(products) {
+            const container = document.getElementById("cardsContainer");
+
+            products.forEach((product) => {
+                const card = document.createElement("div");
+                card.className = "card";
+
+                const image = product.images && product.images.length ? product.images[0] : product.thumbnail;
+                const qrCode = product.meta && product.meta.qrCode ? product.meta.qrCode : "";
+
+                card.innerHTML = `
+                    <img class="product-image" src="${image}" alt="${product.title}">
+                    <div class="card-body">
+                        <h3>${product.title}</h3>
+                        <span class="category">${product.category}</span>
+                        <span class="rating">⭐ ${product.rating}</span>
+                        <span class="price">$${product.price}</span>
+                        ${qrCode ? `
+                        <div class="qrcode-wrap">
+                            <img src="${qrCode}" alt="QR code for ${product.title}">
+                        </div>` : ""}
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        fetchProducts();
+    </script>
+</body>
+</html>
