@@ -1,12 +1,15 @@
 import "./user.css";
 
-function User({name, id, age}){
+function User({user}){
     // console.log("Props",props);
     return(
-        <div style={{"display":"flex", "gap":"0px", "border":"1px solid red", "fontWeight":"bold", "flexDirection":"column", "alignItems":"start"}}>
-            <p className="id">User ID: {id}</p>
-            <p className="name">User Name: {name}</p>
-            <p className="age">User Age: {age}</p>
+        <div style={{"display":"flex", "gap":"0px", "border":"1px solid white", "fontWeight":"bold", "flexDirection":"column", "alignItems":"start"}}>
+            <p className="id">User ID: {user.id}</p>
+            <p className="name">User Name: {user.firstName}</p>
+            <p className="age">User Age: {user.age}</p>
+            <p className="email">User Email: {user.email}</p>
+            <p className="gender">User Gender: {user.gender}</p>
+            <p className="phone">User Phone: {user.phone}</p>
         </div>
     )
 }

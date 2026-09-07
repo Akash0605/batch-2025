@@ -1,14 +1,15 @@
 
 import './App.css';
 import UserList from "./component/UserList"
+import Navbar from "./component/navbar/Navbar"
+import Footer from "./component/footer/Footer"
 
 function App() {
   return (
     <div className="App">
-      This is app components.
+      <Navbar />
       <UserList />
-      <UserList />
-      <UserList />
+      <Footer />
     </div>
   );
 }
