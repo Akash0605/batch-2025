@@ -8,7 +8,7 @@ function UserList() {
     const users = data.users;
     console.log(users[0].firstName);
     return(
-        <div style={{"display":"flex", "background":"red", "flexDirection":"column", "border":"1px solid black"}}>
+        <div style={{"display":"flex", "width":"100%", "background":"red", "gap":"10px", "flexWrap":"wrap", "padding":"10px", "border":"1px solid black"}}>
             {
                 users.map((user) => (
                     <User user={user} />
