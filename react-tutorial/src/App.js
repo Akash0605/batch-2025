@@ -4,6 +4,7 @@ import UserList from "./component/UserList"
 import Navbar from "./component/navbar/Navbar"
 import Footer from "./component/footer/Footer"
 import Login from "./component/login/Login"
+import Form from "./component/form/Form"
 
 import { useState } from 'react';
 
@@ -39,6 +40,8 @@ function App() {
       {/* {
         isLoggedInBool ? <UserList /> : <Login />
       } */}
+
+      <Form />
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
 
