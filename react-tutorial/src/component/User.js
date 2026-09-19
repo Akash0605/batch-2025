@@ -10,6 +10,7 @@ function User({user, onDeleteUser}){
             <p className="email">User Email: {user.email}</p>
             <p className="gender">User Gender: {user.gender}</p>
             <p className="phone">User Phone: {user.phone}</p>
+            
             <div className="dlt"><button className="delete" type="button" onClick={(e) => onDeleteUser(e, user.id)}>Delete</button></div>
         </div>
     )
