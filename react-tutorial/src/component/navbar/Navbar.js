@@ -12,7 +12,7 @@ function Navbr({ isLoggedIn }) {
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="/users">User List</Nav.Link>
           </Nav>
           <div>
             <p className={`${isLoggedIn ? 'text-green' : 'text-white'}`}>Logged in as: {isLoggedIn ? "John Doe" : "Guest"}</p>

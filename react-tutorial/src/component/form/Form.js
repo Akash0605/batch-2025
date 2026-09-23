@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 export default function Form(){
 
     const [name, setName] = useState("");
@@ -18,6 +19,7 @@ export default function Form(){
             alert("Form submitted successfully");
             setName("");
             setPassword("");
+            window.location.href = "/users"
         }, 2000);
     }
 

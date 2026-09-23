@@ -6,6 +6,7 @@ import Footer from "./component/footer/Footer"
 import Login from "./component/login/Login"
 import Form from "./component/form/Form"
 import Counter from './component/counter/Counter';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import { useState } from 'react';
 
@@ -19,19 +20,32 @@ function App() {
   console.log("Type of isLoggedInBool : ", typeof isLoggedInBool);
 
   return (
-    <div className="App">
-      <Navbar isLoggedIn={isLoggedInBool} />
+        <BrowserRouter>
+          <Routes>
+            {/* <Route path="/" element={<App />} /> */}
+            <Route path="/login" element={<Login />} />
+            <Route path="/form" element={<Form />} />
+            <Route path="/counter" element={<Counter />} />
+            <Route path="/navbar" element={<Navbar />} />
+            <Route path="/users" element={<UserList />} />
 
-      {
-        isLoggedInBool ? <UserList /> : <Login />
-      }
+          </Routes>
+        </BrowserRouter>
+    // <div className="App">
+    // {/* //   <Navbar isLoggedIn={isLoggedInBool} /> */}
 
-      {/* <Form /> */}
 
-      {/* <Counter /> */}
 
-      <Footer />
-    </div>
+    //   {/* {
+    //     isLoggedInBool ? <UserList /> : <Login />
+    //   } */}
+
+    // {/* //   <Form /> */}
+
+    //   {/* <Counter /> */}
+
+    // {/* //   <Footer /> */}
+    // </div>
   );
 }
 
