@@ -1,0 +1,11 @@
+
+#center {
+  display: flex;
+  gap: 25px;
+  background: white;
+  place-content: center;
+  place-items: center;
+  color: black;
+  flex-grow: 1;
+}
+
